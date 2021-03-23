@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Drip" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Supreme_Logo.svg/1024px-Supreme_Logo.svg.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Supreme logo" />
+    <meta
+      property="og:description"
+      content="Check out who's the drippest of them all!"
+    />
+    <title>Drip</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <audio id="song" loop>
+      <source src="sound/music.mp3" type="audio/mp3" />
+    </audio>
+    <div id="backdrop">CLICK ME</div>
+    <div id="sidebar">
+      <button id="sidebar-toggle">
+        <img src="img/head.png" alt="Settings" />
+      </button>
+      <form>
+        <h1>Configuration</h1>
+        <h3 class="section-header">Particles</h3>
+        <div class="field">
+          <div class="field-name">Velocity</div>
+          <input
+            class="field-value"
+            type="range"
+            id="config-particles-velocity"
+            min="2"
+            max="30"
+            step="1"
+            value="4"
+          />
+        </div>
+        <div class="field">
+          <div class="field-name">Size</div>
+          <input
+            class="field-value"
+            type="range"
+            id="config-particles-size"
+            min="1"
+            max="20"
+            step="1"
+            value="5"
+          />
+        </div>
+        <div class="field">
+          <div class="field-name">Frequency</div>
+          <input
+            class="field-value"
+            type="range"
+            id="config-particles-frequency"
+            min="0"
+            max="100"
+            step="1"
+            value="20"
+          />
+        </div>
+        <h3 class="section-header">Pixelation</h3>
+        <div class="field">
+          <div class="field-name">Enabled</div>
+          <input
+            class="field-value"
+            type="checkbox"
+            id="config-pixelation-enabled"
+            checked="checked"
+          />
+        </div>
+        <div class="field">
+          <div class="field-name">Pixel size</div>
+          <input
+            class="field-value"
+            type="range"
+            id="config-pixelation-size"
+            min="1"
+            max="100"
+            step="1"
+            value="10"
+          />
+        </div>
+        <h3 class="section-header">Music</h3>
+        <div class="field">
+          <div class="field-name">Volume</div>
+          <input
+            class="field-value"
+            type="range"
+            id="config-music-volume"
+            min="0"
+            max="10"
+            step="1"
+            value="1"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <canvas id="drip"></canvas>
+      <canvas id="head" class="head"></canvas>
+    </div>
+  </body>
+  <script src="src/main.js"></script>
+</html>
